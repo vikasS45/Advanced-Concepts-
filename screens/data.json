@@ -1,0 +1,125 @@
+{
+      "filters": [
+            
+            {
+                  "title": "Answered"
+            },
+            {
+                  "title": "Added by you"
+            },
+            {
+                  "title": "Pending"
+            }
+            
+      ],
+
+    "All":[
+          
+          {
+                "id": 101,
+                "total":4,
+                "name":"Vikas Salunke",
+                "time":"5 days ago",
+                "sub":"Physics",
+                "title": "Why is the sky blue",
+                "answer": [
+                      {
+                            "no": 1,
+                            "info": "The earth is surrounded by an atmosphere."
+                      },
+                      {
+                            "no": 2,
+                            "info": "The way the sun’s light travels through the atmosphere makes the sky look blue.."
+                      },
+                      {
+                            "no": 3,
+                            "info": "White light is made of several different colors, like you see in a rainbow."
+                      },
+                      {
+                            "no": 4,
+                            "info": "When light from the sun enters our atmosphere, the waves collide with gas molecules."
+                      }
+                ]
+          },
+
+          {
+                "id": 102,
+                "total":4,
+                "name":"Rahul Shinde",
+                "time":"2 days ago",
+                "sub":"Physics",
+                "title": " How much does the earth weigh",
+                "answer": [
+                      {
+                            "no": 1,
+                            "info": "The earth weighs 13,170,000,000,000,000,000,000,000 pounds."
+                      },
+                      {
+                            "no": 2,
+                            "info": "One male African bush elephant weighs 13,000 pounds."
+                      },
+                      {
+                            "no": 3,
+                            "info": "One million elephants would weigh 13,000,000,000 (13 trillion) pounds."
+                      },
+                      {
+                            "no": 4,
+                            "info": "One trillion elephants–there are not even this many on earth–would weigh 13,000,000,000,000,000 (13 quintillion) pounds."
+                      }
+                ]
+          },
+          {
+                "id": 103,
+                "total":4,
+                "name":"Rohit Kumar",
+                "time":"10 days ago",
+                "sub":"Chemistry",
+                "title": "Why is the sky blue",
+                "answer": [
+                      {
+                            "no": 1,
+                            "info": "The earth is surrounded by an atmosphere."
+                      },
+                      {
+                            "no": 2,
+                            "info": "The way the sun’s light travels through the atmosphere makes the sky look blue.."
+                      },
+                      {
+                            "no": 3,
+                            "info": "White light is made of several different colors, like you see in a rainbow."
+                      },
+                      {
+                            "no": 4,
+                            "info": "When light from the sun enters our atmosphere, the waves collide with gas molecules."
+                      }
+                ]
+          },
+
+          {
+                "id": 104,
+                "total":4,
+                "name":"Mahesh Patil",
+                "time":"5 days ago",
+                "sub":"Chemistry",
+                "title": " How much does the earth weigh",
+                "answer": [
+                      {
+                            "no": 1,
+                            "info": "The earth weighs 13,170,000,000,000,000,000,000,000 pounds."
+                      },
+                      {
+                            "no": 2,
+                            "info": "One male African bush elephant weighs 13,000 pounds."
+                      },
+                      {
+                            "no": 3,
+                            "info": "One million elephants would weigh 13,000,000,000 (13 trillion) pounds."
+                      },
+                      {
+                            "no": 4,
+                            "info": "One trillion elephants–there are not even this many on earth–would weigh 13,000,000,000,000,000 (13 quintillion) pounds."
+                      }
+                ]
+          }
+    ]
+}
