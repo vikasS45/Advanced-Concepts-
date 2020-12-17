@@ -10,7 +10,8 @@ import {
     Dimensions,
     TextInput,
     Alert,
-    ImageBackground
+    ImageBackground,
+    ScrollView
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -95,13 +96,15 @@ export default class AskDoubt extends Component {
             <View style={{margin:5}}>
             <ImageBackground style={styles.ImageContainer} source={element.local} >
                 <TouchableOpacity onPress={()=> this.deleteFromArray(element)}>
-            <AntDesign name="close" size={20} style={{marginTop:100,marginRight:0}}/>
+            <Entypo name="circle-with-cross" size={20} color="gray" style={{marginTop:100,marginLeft:95}}/>
                 </TouchableOpacity>
             </ImageBackground>
             </View> 
           );
         });
       };
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -125,10 +128,12 @@ export default class AskDoubt extends Component {
 
 
 
-                    <View style={{ marginTop: 20, height: 200, width: 300, borderWidth: 2, borderColor: 'gray', borderRadius: 20 }}>
+                    <View style={{ marginTop: 20, height: 200, width: 300, borderWidth: 2, borderColor: 'gray',borderRadius:20 }}>
                      
                         {this.state.ImageSource &&
-                        <View style={{flexDirection:'row'}}>{this.showSelectedImages()}</View>
+                        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                        <View style={{flexDirection:'row',marginLeft:5}}>{this.showSelectedImages()}</View>
+                        </ScrollView>
                         }
                      
                      {  (!this.state.ImageSource) &&
@@ -137,7 +142,7 @@ export default class AskDoubt extends Component {
                         </View>
                        }
 
-                        <View style={{ alignSelf: 'flex-end', marginRight: 20,marginTop:10 }}>
+                        <View style={{ alignSelf: 'flex-end', marginRight: 20,padding:5 }}>
                             <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
                                 <View style={{ borderWidth: 1, borderRadius: 15, borderColor: 'gray', padding: 5 }}>
                                     <View style={{ flexDirection: 'row-reverse', }}>
@@ -155,7 +160,7 @@ export default class AskDoubt extends Component {
 
                 <View>
                     <TouchableOpacity style={styles.button} onPress={() => { }} >
-                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>Submit Doubt</Text>
+                        <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>Add Doubt</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -174,12 +179,12 @@ const styles = StyleSheet.create({
     },
 
     ImageContainer: {
-        borderRadius: 10,
-        marginRight:5,
-        width: 120,
+     
+        borderRadius:10,
+        width: 125,
         height: 120,
         borderColor: '#9B9B9B',
-        borderWidth: 1 / PixelRatio.get(),
+        borderWidth: 1 ,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#CDDC39',
@@ -201,9 +206,10 @@ const styles = StyleSheet.create({
     },
     button: {
         color: 'black',
-        width: 280,
+        width: 150,
         height: 50,
-        alignSelf: 'center',
+        alignSelf: 'flex-end',
+        marginRight:22,
         padding: 10,
         borderRadius: 20,
         borderWidth: 2,
