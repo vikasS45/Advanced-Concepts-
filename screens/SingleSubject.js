@@ -278,7 +278,7 @@ const styles =StyleSheet.create({
         padding: 7,
         borderWidth: 1, 
         borderRadius: 15, 
-        borderColor: '#dce0e5', 
+        borderColor: 'black', 
         backgroundColor:'gray',
     },
     activeText:{
