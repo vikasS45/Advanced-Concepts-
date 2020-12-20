@@ -19,7 +19,8 @@ export default class SingleSubject extends Component {
         this.state = {
             items: [],
             status:'All',
-
+             page: 0,
+             dataPosts:[]
             
 
         }
@@ -32,6 +33,7 @@ export default class SingleSubject extends Component {
 
     componentDidMount() {
         this.fetchQestions();
+      //  this.addRecords(0);
     }
 
     
@@ -91,7 +93,7 @@ export default class SingleSubject extends Component {
     }
 
 
-        //  DYNAMIC SEARCH ON TEXT CHANGE
+        //    DYNAMIC SEARCH ON TEXT CHANGE
 
     searchFilterFunction = text => {
         this.setState({
@@ -110,6 +112,29 @@ export default class SingleSubject extends Component {
       };
     
    
+
+
+  onScrollHandler = () => {
+    this.setState({
+      page: this.state.page + 1
+    }, () => {
+      this.addRecords(this.state.page);
+    });
+  }
+
+  addRecords = (page) => {
+    // assuming this.state.dataPosts hold all the records
+    const newRecords = []
+    for(var i = page * 12, il = i + 12; i < il && i < 
+      this.state.dataPosts.length; i++){
+      newRecords.push(this.state.dataPosts[i]);
+    }
+    this.setState({
+      items: [...this.state.items, ...newRecords]
+    });
+  }
+
+  
 
     render() {
         const title = this.props.title;
@@ -178,6 +203,8 @@ export default class SingleSubject extends Component {
                 {this.state.items ? (
                     <FlatList
                         data={this.state.items}
+                        onEndReached={this.onScrollHandler}
+                        onEndThreshold={0}
                         keyExtractor={(x, i) => i.toString()}
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item }) => (
