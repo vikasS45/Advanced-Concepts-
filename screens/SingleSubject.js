@@ -203,8 +203,8 @@ export default class SingleSubject extends Component {
                 {this.state.items ? (
                     <FlatList
                         data={this.state.items}
-                        onEndReached={this.onScrollHandler}
-                        onEndThreshold={0}
+                        // onEndReached={this.onScrollHandler}
+                        // onEndThreshold={0}
                         keyExtractor={(x, i) => i.toString()}
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item }) => (
